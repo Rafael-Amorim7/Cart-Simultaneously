@@ -27,48 +27,9 @@ func Sum(array []float64) float64 {
 	return result
 }
 
-func cartOne() {
-	cart := []items{
-		{id: 1, product: "iPhone", price: 499.0},
-		{id: 2, product: "Kindle", price: 179.0},
-		{id: 3, product: "Macbook", price: 1199.0},
-	}
-	cartPrices := Map(cart, func(i items) float64 { return i.price })
-	cartSum := Sum(cartPrices)
-	fmt.Println("Cart -> ", cart)
-	fmt.Println("Sum -> ", cartSum)
-}
-
-func cartTwo() {
-	cart := []items{
-		{id: 1, product: "PlayStation 5", price: 499.0},
-		{id: 2, product: "Bike", price: 179.0},
-		{id: 3, product: "iPad Pro", price: 1199.0},
-	}
-	cartPrices := Map(cart, func(i items) float64 { return i.price })
-	cartSum := Sum(cartPrices)
-	fmt.Println("Cart -> ", cart)
-	fmt.Println("Sum -> ", cartSum)
-}
-
-func cartThree() {
-	cart := []items{
-		{id: 1, product: "Galaxy S20", price: 499.0},
-		{id: 2, product: "Samsung pen", price: 179.0},
-		{id: 3, product: "Samsung OLED", price: 1199.0},
-	}
-	cartPrices := Map(cart, func(i items) float64 { return i.price })
-	cartSum := Sum(cartPrices)
-	fmt.Println("Cart -> ", cart)
-	fmt.Println("Sum -> ", cartSum)
-}
-
 func main() {
 	start := time.Now()
 
-	// go cartOne()
-	// go cartTwo()
-	// go cartThree()
 	go func() {
 		cart := []items{
 			{id: 1, product: "iPhone", price: 499.0},
